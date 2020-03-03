@@ -1,0 +1,8 @@
+{
+    "name": "vgg16_tensorflowjs",
+    "version": "1.0.0",
+    "dependencies": {
+        "express": "latest",
+        "req": "^0.1.4"
+    }
+}

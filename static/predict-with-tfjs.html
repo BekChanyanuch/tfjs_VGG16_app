@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>deep learning application</title>
+    <!-- using bootstrap -->
+    <!-- open source lib. for developing HTML,CSS,JavaScript for design templates to format element on the page-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+</head>
+<body>
+    <main>
+        <!-- first div ids container of the page -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <!-- 40 second for VGG16 -->
+                    <div class = "progress progress-bar progress-bar-striped progress-bar-animated mb-2">Loading Model</div>
+                </div>
+            </div>
+            <!-- inside container are row and column -->
+            <!-- row -->
+            <div class="row">
+                <!-- column -->
+                <div class ="col-6">
+                    <!-- image selector -->
+                    <input id="image-selector" class="form-control border" type="file">
+                </div>
+                <div class ="col-6">
+                    <!-- prediction button -->
+                    <button id="predict-button" class="btn btn-dark float-right">Predict</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class ="col">
+                    <h2 class="ml-3">Predictions</h2>
+                    <!-- prediction list-->
+                    <ol id="prediction-list"></ol>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class ="col-12">
+                    <!-- selected image -->
+                    <h2 class="ml-3">Image</h2>
+                    <img id="selected-image" class="ml-3" src="" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- import jQuery -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <!-- import tensorflow -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <!-- import imagenet_classes.js file -->
+    <script src="imagenet_classes.js"></script>
+    <!-- import logic file -->
+    <script src="predict_preprocess.js"></script>
+    <!-- <script src="predict.js"></script> -->
+    
+</body>
+
+</html>
